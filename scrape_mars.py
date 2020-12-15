@@ -3,7 +3,8 @@ from splinter import Browser
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import time
-import re
+import requests
+#from webdriver_manager.chrome import ChromeDriverManager
 
 # This is for debugging
 
@@ -14,7 +15,7 @@ def savetofile(contents):
 
 
 def scrape():
-    executable_path = {"executable_path": "chromedriver"}
+    executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
     browser = Browser("chrome", **executable_path, headless=False)
 
     # NASA Mars News
